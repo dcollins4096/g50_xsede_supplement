@@ -1,0 +1,102 @@
+%\documentclass[11pt]{article}  % for e-submission to ApJ
+\documentclass[11pt]{NSF}  % for e-submission to ApJ
+
+%\documentclass[12pt,preprint2]{aastex}  % for e-submission to ApJ - two column
+
+%\documentclass[manuscript]{emulateapj}  % this makes everything look like ApJ
+
+\usepackage{graphicx, natbib, color, bm, amsmath, epsfig}
+\input{aas_papers.tex}
+\input{commands.tex}
+\input{names}
+\citestyle{aa}  % correct formatting for ApJ style files
+
+\usepackage{aas_macros}
+\begin{document}
+
+\begin{centering}
+\begin{LARGE}
+Progress Report for
+
+TG-AST140008
+
+\end{LARGE}
+\end{centering}
+
+
+\pagestyle{plain}
+
+During our 2019-2020 allocation we have primarily work on analysis of results and writing papers.
+No publications have been submitted by the time of this writing, but four papers
+from the \nameCores\ project are in preparation, and one paper for the
+\nameSupernova\ project will be submitted by the end of the calendar year.
+
+\begin{figure}[h] \begin{center}
+\includegraphics[width=\hw\textwidth]{../figs/follow_c0001_n0001_centered_Projection_x_density.png}
+\includegraphics[width=\hw\textwidth]{../figs/follow_c0001_n0125_centered_Projection_x_density.png}
+\caption[ ]{A prestellar core (right) and it's birth environment (left).
+Analysis of the density and velocity in the collapsing gas is underway. }
+\label{fig.core} \end{center} \end{figure}
+
+The first paper in the \nameCores\ project examines the initial conditions and
+collapse rate of star forming clouds.  This paper will be submitted in the Fall
+of 2020.  An image of the first and last frames for one of the many cores can be
+seen in Figure \ref{fig.core}.  We find that the cores do not always have a
+phase where the velocity is subsonic, as was originally expected; and the
+collapse is slower than free-fall in all but the largest objects, which are
+substantially faster.
+
+\begin{figure}[h] \begin{center}
+\includegraphics[width=\hw\textwidth]{../figs/EK_0_5_no_mach.pdf}
+\includegraphics[width=\hw\textwidth]{../figs/EK_6_no_mach.pdf}
+\caption[ ]{The PDF of internal energy for our theoretical model (dashed line)
+and preliminary simulation (solid line), for r.m.s. Mach number $\sigma_v=0.5$
+(left) and
+$\sigma_v=6$ (right).  Internal energy is not positive definite, and when the Mach
+number increases beyond unity, $f(E_T)$ develops a long tail to high values, and
+an excess of $E_T<0$.  See Rabatin \& Collins (2020, in prep) for more details.}
+%\label{fig.turb} \end{center} \end{wrapfigure}
+\label{fig.turb} \end{center} \end{figure}
+
+The second paper, also to be submitted in the Fall, is an examination
+of a new analytical formulation of the distribution of energy in isothermal
+turbulence.  Figure \ref{fig.turb} shows our analytic result (dashed line) and
+the distribution of internal energy for a simulation with r.m.s. Mach number of
+6.  This study needs a few more simulations to ensure the trends happen at
+higher Mach numbers, but is otherwise nearing completion.
+
+The third paper, hopefully to be submitted by the end of 2020,
+examines the behavior of magnetic fields during the collapse.   It is found that
+the ratio of magnetic field strength to density decreases as a function of time
+by the act of turbulence alone.  
+
+The fourth publication, to be completed early 2021, is an examination of the
+full suite of forces acting on collapsing gas.  
+
+This year the \nameSupernova\ ran a series of successful fixed-resolution white
+dwarf simulations.  Slices of the star, showing the Nickle that results from the
+burning (yellow) and magnetic field lines (blue lines) can be seen in Figure
+\ref{fig.sn}  While these are at the
+same simulation time, the more magnetized simulation (on the right) shows a suppression of the
+height and secondary Kelvin-Helmholtz bubbles seen in the first simulation.
+These results will hopefully be submitted during the Fall of 2020.
+
+
+
+\begin{figure} \begin{center}
+\includegraphics[width=\hw\textwidth]{../figs/p52_434__0060_Slice_x_Density_56Ni.png}
+\includegraphics[width=\hw\textwidth]{../figs/p52_441__0060_Slice_x_Density_56Ni.png}
+\caption[ ]{Preliminary simulations of nuclear burning in white dwarfs and the
+impact of magnetic fields.  The color field is the density of $^{56}\rm{Ni}$,
+the product of burning Carbon and Oxygen.  The simulation on the left does not have a
+dynamically important magnetic field, while the simulation on the right does.
+One can see the suppression of the Rayleigh Taylor bubbles with the addition of
+the magnetic field.}
+\label{fig.sn} \end{center} \end{figure}
+
+%\bibliographystyle{apj}
+%\bibliography{apj-jour,Progress.bib}  % looks in ms.bib for bibliography info
+
+\end{document}  
+
+

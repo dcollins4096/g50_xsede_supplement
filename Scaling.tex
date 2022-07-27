@@ -1,0 +1,101 @@
+%\documentclass[11pt]{article}  % for e-submission to ApJ
+\documentclass[11pt]{NSF}  % for e-submission to ApJ
+
+%\documentclass[12pt,preprint2]{aastex}  % for e-submission to ApJ - two column
+
+%\documentclass[manuscript]{emulateapj}  % this makes everything look like ApJ
+
+\usepackage{graphicx, natbib, color, bm, amsmath, epsfig}
+\input{aas_papers.tex}
+\input{commands.tex}
+\input{names}
+\citestyle{aa}  % correct formatting for ApJ style files
+
+\usepackage{aas_macros}
+\begin{document}
+
+\begin{centering}
+\begin{LARGE}
+Scaling Information for 
+
+``Three Projects in Astrophysical Magnetohydrodynamics''
+\end{LARGE}
+
+David Collins, PI
+
+\end{centering}
+
+
+\pagestyle{plain}
+
+The three projects presented in this proposal will be using the code Enzo
+\citep{Bryan14}.
+Enzo  is an open source adaptive mesh refinement (AMR) code that
+has been used in hundreds of astrophysical works.  These studies include the
+formation of the first stars \citep{Abel02}, clusters of galaxies \citep{Xu11}
+and the large scale structure of the universe.  It employs several hydrodynamics
+solvers, including the piecewise parabolic method  \citep[PPM,][]{Colella84}, two implementations of
+magnetohydrodynamics (MHD), self-gravity, and Lagrangian particles that can be used
+for collisionless dark matter, stars, dust, and passive tracers.  One of the
+primary advantages of Enzo over other codes is its use of structured AMR, which
+allows it to add resolution elements adaptively as dictated by the problem.  A
+variety of refinement criterion are available.   The present studies will use
+the divergence-preserving MHD module \citep{Collins10}.  For the patch solver we
+use the
+second order MHD method of \citet{Li08a} and the constrained transport method of
+\citet{Gardiner05} to preserve the divergence-free constraint (\divbo) to
+machine precision.  For the AMR, the divergence-free reconstruction of \citet{Balsara01}
+is used to interface magnetic fields with the adaptive mesh.  For chemistry and
+radiative cooling used in the \emph{cores} project, Grackle is used
+\citep{Smith17}.  For the burning operator in the \emph{supernova} project, we
+use the implementation of \citep{Hristov18}. The \emph{turbulence} project will
+use only the isothermal MHD package.
+
+
+To measure the behavior of the solvers, we ran a weak scaling test with the main
+physics packages for the three projects.  
+A constant amount of
+work, $128^3$ zones per task, was used for each node, and the refinement was forced to
+occupy the inner 1/8 of the domain volume.  Scaling was done from 8 through 4096
+processors, with 64 threads per node (when possible).
+The packages in question do not depend heavily on the regime of
+physics in question, so uniform gas was taken in each case.  The results can be
+seen in Figure \ref{fig.scaling}.  Here we plot updates-per-core-second.
+for ideal scaling, this will be independent of the number of nodes or zones.  
+
+The blue curve, applicable to the \nameTurbulence\ suite, contains only the MHD
+solver and random forcing.  This is extremely parallelizable, as the work is
+entirely local.  The orange curve, applicable to the \nameSupernova\ project,
+uses the MHD solver and nuclear burning machinery.  The performance of this
+package sharply declines at 4096 threads.  
+This decrease in performance will be
+addressed in the near future, but does not pose a threat to the successful
+completion of the simulations.  The green curve is a uniform box with MHD,
+cooling, and self gravity.  Being a non-local operator, the self gravity does
+not scale perfectly.  This curve is relevant for the \nameCores\ project.
+
+If $Z$ is the number of updates-per-core-second in the Figure, the cost per
+simulation in node-hours, $SU_{zu}=1/(Z*3600*N_{\rm{core-per-node}})$.  We will
+use 64 threads-per-node where possible.  
+
+\begin{figure} \begin{center}
+    \includegraphics[width=0.99\textwidth]{g40_zoneup.pdf}
+\caption[ ]{Updates per core-second for weak scaling with one level of AMR on
+    Stampede 2.    The three curves correspond to the three different sets of
+    physics packages for each suite of simulations.  The blue curve only employs
+    the MHD solver, in the configuration used for the \nameTurbulence\
+    simulations.  The orange curve employs the MHD solver as well as the burning
+    operator, and will be used for the \nameSupernova\ simulations.  The green
+    curve employs self gravity and cooling, and will be used for the \nameCores\
+    simulations.
+    }
+\label{fig.scaling} \end{center} \end{figure}
+
+
+
+\bibliographystyle{apj}
+\bibliography{apj-jour,ms.bib}  % looks in ms.bib for bibliography info
+
+\end{document}  
+
+

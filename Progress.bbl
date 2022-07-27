@@ -1,0 +1,8 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Hristov} {et~al.}(2021){Hristov}, {Hoeflich}, \&
+  {Collins}}]{Hristov21}
+{Hristov}, B., {Hoeflich}, P., \& {Collins}, D.~C. 2021, \apj, 923, 210
+
+\end{thebibliography}

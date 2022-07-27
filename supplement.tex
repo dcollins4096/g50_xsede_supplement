@@ -1,0 +1,54 @@
+
+\def\request{4352 SU}
+
+We are requesting \request\ to supplement our grant.  This supplement will allow
+us to continue progressing while we await the next proposal review.
+
+During the work on the \nameTurbulence\ project, it was discovered that these
+results extend nicely to magnetized studies.  We have begun four MHD simulations,
+and will continue these during the period between August and October.  
+
+The four simulations are driven turbulence with uniform mean magnetic fields.
+In these simulations, kinetic energy is added to the simulation at a controlled
+rate.  This energy is added to the large scale of the simulation, and the
+nonlinear dynamics of the system cause the energy to cascade to smaller scales.
+Energy is then dissipated by the numerics at the smallest scale.    The
+important information carrying regime is the \emph{inertial range}, between the
+driving and dissipation scales.  The simulations all have an r.m.s. velocity of 5 $c_s$,
+where $c_s$ is the speed of sound in the cloud, magnetic fields such that the
+ratio of the r.m.s. velocity to magnetic velocity is 1/2, 1, 2, and 3.  Thus the
+simulations range from strongly magnetized to weakly.
+
+The resolution of these simulations is $512^3$.  This resolution represents a
+balance between cost and benefit; large enough to resolve a inertial range, but
+small enough to be run relatively quickly.  
+
+The simulation time for the simulations is based on the pattern turn-over time, the time
+for the large-scale velocity pattern to replace itself.  We define the dynamical
+time as
+$t_{dyn} =L/V$, where $L$ is the pattern size and $V$ is the r.m.s velocity in
+the box.  During a simulation, it takes roughly two $t_{dyn}$ for the energy to
+fully cascade to small scales.  We then run for another three $t_{dyn}$ to
+establish statistics.  Turbulence is a chaotic process, and any given snapshot
+is not necessarily representative of the trends.  Averaging over three dynamical
+times allows us to have converged statistics.
+
+The four simulations are being run on \emph{Stampede 2}.  They are each using 8
+nodes, with 64 cores per node.  They have each had one day of simulations and
+are at $t=1 t_{dyn}$, so will need four more restarts each.  A more elaborate
+estimate of the timing can be found in the original proposal.  Thus the total
+supplement request is 
+\begin{align}
+8 \rm{nodes} \times 4 \rm{sims} \times 4 \rm{restarts} \times 24 \rm{hrs} =
+3072 SUs.
+\end{align}
+
+In addition to simulation time, we are requesting an additional 1440 SU for
+analysis.  Analysis is done both with interactive and batch sessions, and is
+done one node at a time.  There are roughly 40 business days in August and
+September, the period the supplement will cover, and if the three grad students
+and one PI are working for 8 hours per day, that yields 
+\begin{align}
+    40 \rm{days}\ \times 4 \rm{people} \times 8 \rm{hours}=1280 \rm{SUs}
+\end{align}
+hours for analysis time.

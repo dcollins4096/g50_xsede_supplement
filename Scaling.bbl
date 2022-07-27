@@ -1,0 +1,54 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Abel} {et~al.}(2002){Abel}, {Bryan}, \& {Norman}}]{Abel02}
+{Abel}, T., {Bryan}, G.~L., \& {Norman}, M.~L. 2002, Science, 295, 93
+
+\bibitem[{{Balsara}(2001)}]{Balsara01}
+{Balsara}, D.~S. 2001, \jcompphys, 174, 614
+
+\bibitem[{{Bryan} {et~al.}(2014){Bryan}, {Norman}, {O'Shea}, {Abel}, {Wise},
+  {Turk}, {Reynolds}, {Collins}, {Wang}, {Skillman}, {Smith}, {Harkness},
+  {Bordner}, {Kim}, {Kuhlen}, {Xu}, {Goldbaum}, {Hummels}, {Kritsuk}, {Tasker},
+  {Skory}, {Simpson}, {Hahn}, {Oishi}, {So}, {Zhao}, {Cen}, {Li}, \& {Enzo
+  Collaboration}}]{Bryan14}
+{Bryan}, G.~L., {Norman}, M.~L., {O'Shea}, B.~W., {Abel}, T., {Wise}, J.~H.,
+  {Turk}, M.~J., {Reynolds}, D.~R., {Collins}, D.~C., {Wang}, P., {Skillman},
+  S.~W., {Smith}, B., {Harkness}, R.~P., {Bordner}, J., {Kim}, J.-h., {Kuhlen},
+  M., {Xu}, H., {Goldbaum}, N., {Hummels}, C., {Kritsuk}, A.~G., {Tasker}, E.,
+  {Skory}, S., {Simpson}, C.~M., {Hahn}, O., {Oishi}, J.~S., {So}, G.~C.,
+  {Zhao}, F., {Cen}, R., {Li}, Y., \& {Enzo Collaboration}. 2014, \apjs, 211,
+  19
+
+\bibitem[{{Colella} \& {Woodward}(1984)}]{Colella84}
+{Colella}, P. \& {Woodward}, P.~R. 1984, \jcompphys, 54, 174
+
+\bibitem[{{Collins} {et~al.}(2010){Collins}, {Xu}, {Norman}, {Li}, \&
+  {Li}}]{Collins10}
+{Collins}, D.~C., {Xu}, H., {Norman}, M.~L., {Li}, H., \& {Li}, S. 2010, \apjs,
+  186, 308
+
+\bibitem[{{Gardiner} \& {Stone}(2005)}]{Gardiner05}
+{Gardiner}, T.~A. \& {Stone}, J.~M. 2005, \jcompphys, 205, 509
+
+\bibitem[{{Hristov} {et~al.}(2018){Hristov}, {Collins}, {Hoeflich},
+  {Weatherford}, \& {Diamond}}]{Hristov18}
+{Hristov}, B., {Collins}, D.~C., {Hoeflich}, P., {Weatherford}, C.~A., \&
+  {Diamond}, T.~R. 2018, \apj, 858, 13
+
+\bibitem[{{Li} {et~al.}(2008){Li}, {Li}, \& {Cen}}]{Li08a}
+{Li}, S., {Li}, H., \& {Cen}, R. 2008, \apjs, 174, 1
+
+\bibitem[{{Smith} {et~al.}(2017){Smith}, {Bryan}, {Glover}, {Goldbaum}, {Turk},
+  {Regan}, {Wise}, {Schive}, {Abel}, {Emerick}, {O'Shea}, {Anninos}, {Hummels},
+  \& {Khochfar}}]{Smith17}
+{Smith}, B.~D., {Bryan}, G.~L., {Glover}, S.~C.~O., {Goldbaum}, N.~J., {Turk},
+  M.~J., {Regan}, J., {Wise}, J.~H., {Schive}, H.-Y., {Abel}, T., {Emerick},
+  A., {O'Shea}, B.~W., {Anninos}, P., {Hummels}, C.~B., \& {Khochfar}, S. 2017,
+  \mnras, 466, 2217
+
+\bibitem[{{Xu} {et~al.}(2011){Xu}, {Li}, {Collins}, {Li}, \& {Norman}}]{Xu11}
+{Xu}, H., {Li}, H., {Collins}, D.~C., {Li}, S., \& {Norman}, M.~L. 2011, \apj,
+  739, 77
+
+\end{thebibliography}
