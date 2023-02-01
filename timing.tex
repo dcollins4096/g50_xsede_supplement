@@ -1,0 +1,35 @@
+\section{Timing}
+\input{tableX}
+
+The total cost can be found as
+\begin{align}
+SU &= T_{wall} N_N\\
+T_{wall} &= \frac{N_Z N_U}{N_C \zeta} \frac{1}{3600},
+\end{align}
+where $N_N$ is the number of nodes, $N_Z$ is the number of zones, $N_U$ is the number of updates, $N_C$ the
+number of cores, and $\zeta$ = (zone-updates)/(core-second) is the performance of
+the code.  $N_Z$ is set by our target resolution of $1024^3$.  From the scaling
+study, we find that $\zeta=10^5$.  Due to the excellent scaling of
+fixed-resolution Enzo, we will use $N_C=4096$.
+We will use 64 cores per node and 4096
+cores, so $N_N=64$.
+$N_U$ is the number of updates,
+which depends on \Mach\ in the following way.
+
+The number of updates is found by $N_U=T_{sim}/\Delta t$.  $T_{sim}=10\tdyn$ per
+our noise requirement.  The time step size, $\Delta t$, is determined by a
+typical Courant condition that the signal cannot propagate more than half a zone
+in a timestep,
+\begin{align}
+\Delta t &= \eta \frac{\Delta x}{v_{max}+ c_s}\\
+&\propto \frac{1}{1+\Mach}
+\end{align}
+where $\Delta x$ is the zone size, and $v_{max}+c_s$ is the maximum signal speed over
+the whole domain.
+It was verified with our suite of Mach 8 $1024^3$ runs that $\Delta t$ does not
+depend on the forcing parameter, $\xi$.  
+The peak velocity, $v_{max}$, is not predictable due to the chaos of the
+turbulence, but is thankfully found to scale with the Mach number, and we
+calibrate to our recent high res simulations.
+
+
