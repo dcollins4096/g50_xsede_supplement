@@ -1,4 +1,21 @@
-\input{tableX}
+\begin{figure}[h] \begin{center}
+\includegraphics[width=0.28\textwidth]{Joint1e.png}
+\includegraphics[width=0.28\textwidth]{Joint2e.png}
+\includegraphics[width=0.38\textwidth]{resolution.png}
+\caption[ ]{\emph{(Left, Center)} The joint distribution between density
+(horizontal) and velocity (vertical) for low resolution preliminary runs.  For
+uncorrelated variables, the joint distribution would be symmetric, while here we
+have a pronounced tilt.  We have analytic models that reproduce these contours
+accurately.  The left panel shows an averaging window of 30\tdyn, while the
+right has averaged over 100 \tdyn. Higher resolution can be run for only 10\tdyn
+and achieve the same signal-to-noise.
+\emph{(Right)}
+The relation between  the Mach number and the
+variance in density, $\sigma_\rho$.  Black points show low resolution runs at
+$256^3$, while the red point was run with $1024^3$ zones.  The low resolution
+runs fail to reproduce the expected linear trend at large Mach numbers.  
+}
+\label{fig.joint} \end{center} \end{figure}
 
 \begin{Large}
 \noindent\textbf{Motivation}
@@ -30,8 +47,9 @@ is dissipated by molecular viscosity (or an appropriate approximation).
 We have developed analytic models for several quantities in such flows.  The
 probability distribution function for both density and velocity are
 traditionally modeled as a lognormal and Maxwellian, respectively, but our first
-paper has shown that lognormal density is not accurate.  The next thing we are
-verifying is the joint PDF of density and velocity, $f_{\rho,v}(\rho,v)$.  If
+paper has shown that neither is accurate, and we have new models for these PDFs.  The next thing we are
+verifying is the joint PDF of density and velocity, $f_{\rho,v}(\rho,v)$.  This
+can be seen in Figure \ref{fig.joint}.  If
 density and velocity are uncorrelated, which is often assumed, the joint PDF can be written as the
 product of marginalized PDFs, $f_{\rho,v}(\rho,v)=f_\rho(\rho) f_v(v)$.  Our
 preliminary low resolution simulations show that this is not the case, and we have
@@ -102,16 +120,5 @@ like shot noise, $1/\sqrt{t}$, further integration improves the noise slowly.
 
 
 
-\begin{figure} \begin{center}
-\includegraphics[width=0.28\textwidth]{Joint1e.png}
-\includegraphics[width=0.28\textwidth]{Joint2e.png}
-\includegraphics[width=0.38\textwidth]{resolution.png}
-\caption[ ]{\emph{(Left, Center)} The joint distribution between density (horizontal) and velocity (vertical) for low resolution preliminary runs.  For uncorrelated variables, the joint distribution would be symmetric, while here we have a pronounced tilt.  The left panel shows an averaging window of 30\tdyn, while the right has averaged over 100 \tdyn. Higher resolution can be run for only 10\tdyn and achieve the same noise.
-\emph{(Right)}
-The relation between  the Mach number and the
-variance in density, $\sigma_\rho$.  Black points show low resolution runs at
-$256^3$, while the red point was run with $1024^3$ zones.  The low resolution
-runs fail to reproduce the expected linear trend at large Mach numbers.  
-}
-\label{fig.joint} \end{center} \end{figure}
 
+\input{tableX}
